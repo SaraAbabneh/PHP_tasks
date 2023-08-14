@@ -61,5 +61,44 @@ for ($i = 1; $i <= 5; $i++) {
 
 
 
+function drawTriangle($height) {
+    for ($i = 1; $i <= $height; $i++) {
+        // Print spaces before each row
+        for ($k = 1; $k <= $height - $i; $k++) {
+            echo " ";
+        }
+
+        // Print characters in ascending order
+        for ($j = 1; $j <= $i; $j++) {
+            echo chr(64 + $j) . " ";
+        }
+
+        echo("<br>");
+    }
+
+    // Print characters in descending order
+    for ($i = $height - 1; $i >= 1; $i--) {
+        // Print spaces before each row
+        for ($k = 1; $k <= $height - $i; $k++) {
+            echo " ";
+        }
+
+        // Print characters in ascending order
+        for ($j = 1; $j <= $i; $j++) {
+            echo chr(64 + $j) . " ";
+        }
+
+        echo("<br>");
+    }
+}
+
+$triangleHeight = 5; // Change this to the desired height of the triangle
+drawTriangle($triangleHeight);
+
+
+
+
+
+
 
 ?>
